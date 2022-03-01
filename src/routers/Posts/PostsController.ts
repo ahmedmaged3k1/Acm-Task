@@ -21,8 +21,8 @@ export async  function changePostById (request : Express.Request ,response: Expr
         const post = request.body
         const newPost =  new Posts(post)
         
-        const users = await Posts.findOneAndUpdate({"id": +id },newPost)
-        response.json(users)
+        const posts = await Posts.findOneAndUpdate({"id": +id },{"name" : newPost.name },{upsert:true})
+        response.json(posts)
     }
     catch(e){
         next(e)

@@ -33,8 +33,8 @@ export async  function changeUserById (request : Express.Request ,response: Expr
         const user = request.body
         const newUser =  new User(user)
         
-        const users = await User.findOneAndUpdate({"id": +id },newUser)
-        response.json(users)
+        const users = await User.findOneAndUpdate({"id": +id },{"name" : newUser.name },{upsert:true})
+        response.json(newUser)
     }
     catch(e){
         next(e)

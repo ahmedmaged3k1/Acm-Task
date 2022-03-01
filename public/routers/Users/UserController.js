@@ -45,8 +45,8 @@ function changeUserById(request, response, next) {
             var id = request.params.id;
             const user = request.body;
             const newUser = new UsersInterface_1.default(user);
-            const users = yield UsersInterface_1.default.findOneAndUpdate({ "id": +id }, newUser);
-            response.json(users);
+            const users = yield UsersInterface_1.default.findOneAndUpdate({ "id": +id }, { "name": newUser.name }, { upsert: true });
+            response.json(newUser);
         }
         catch (e) {
             next(e);

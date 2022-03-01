@@ -33,8 +33,8 @@ function changePostById(request, response, next) {
             var id = request.params.id;
             const post = request.body;
             const newPost = new PostInterface_1.default(post);
-            const users = yield PostInterface_1.default.findOneAndUpdate({ "id": +id }, newPost);
-            response.json(users);
+            const posts = yield PostInterface_1.default.findOneAndUpdate({ "id": +id }, { "name": newPost.name }, { upsert: true });
+            response.json(posts);
         }
         catch (e) {
             next(e);
