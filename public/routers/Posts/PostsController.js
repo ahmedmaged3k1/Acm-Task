@@ -12,13 +12,13 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.addPost = exports.getPosts = exports.deletePostrById = exports.changePostById = exports.getPostrById = void 0;
+exports.addPost = exports.getPosts = exports.deletePostrById = exports.changePostById = exports.getPostUserById = exports.getPostrById = void 0;
 const PostInterface_1 = __importDefault(require("../../models/Posts/PostInterface"));
 function getPostrById(request, response, next) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             var id = request.params.id;
-            const posts = yield PostInterface_1.default.find({ "id": +id });
+            const posts = yield PostInterface_1.default.find({ "postId": +id });
             response.json(posts);
         }
         catch (e) {
@@ -27,6 +27,19 @@ function getPostrById(request, response, next) {
     });
 }
 exports.getPostrById = getPostrById;
+function getPostUserById(request, response, next) {
+    return __awaiter(this, void 0, void 0, function* () {
+        try {
+            var id = request.params.userId;
+            const posts = yield PostInterface_1.default.find({ "userId": +id });
+            response.json(posts);
+        }
+        catch (e) {
+            next(e);
+        }
+    });
+}
+exports.getPostUserById = getPostUserById;
 function changePostById(request, response, next) {
     return __awaiter(this, void 0, void 0, function* () {
         try {

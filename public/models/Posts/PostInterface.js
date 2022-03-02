@@ -42,6 +42,18 @@ const postSchema = new mongoose_1.Schema({
         required: false,
         minlength: 0,
         maxlength: 70
+    },
+    userId: {
+        type: Number,
+        required: true,
+        minlength: 0,
+        maxlength: 70
+    },
+    postId: {
+        type: Number,
+        required: true,
+        minlength: 0,
+        maxlength: 70
     }
 });
 const Posts = mongoose_1.default.model("Posts", postSchema);

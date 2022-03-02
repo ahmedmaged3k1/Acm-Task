@@ -3,8 +3,8 @@ interface IShoe{
     name:string ,
     description:string,
     image:string[],
-  
-    user:string 
+    user:string ,
+    userId:number 
   
 }
 const schema = mongoose.Schema
@@ -34,6 +34,20 @@ const postSchema = new Schema({
         minlength:0,
         maxlength:70
 
+    }
+    ,
+    userId:{
+        type:Number ,
+        required:true,
+        minlength:0,
+        maxlength:70
+
+    },
+    postId:{
+        type:Number ,
+        required:true,
+        minlength:0,
+        maxlength:70
     }
 })
 const Posts:mongoose.Model<IShoe> = mongoose.model("Posts",postSchema)

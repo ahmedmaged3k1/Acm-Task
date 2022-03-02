@@ -6,7 +6,20 @@ export async  function getPostrById (request : Express.Request ,response: Expres
 
     try{
         var id = request.params.id 
-        const posts = await Posts.find({"id": +id })
+        const posts = await Posts.find({"postId": +id })
+        response.json(posts)
+    }
+    catch(e){
+        next(e)
+    }
+    
+}
+
+export async  function getPostUserById (request : Express.Request ,response: Express.Response, next: Express.NextFunction){
+
+    try{
+        var id = request.params.userId 
+        const posts = await Posts.find({"userId": +id })
         response.json(posts)
     }
     catch(e){
