@@ -21,17 +21,17 @@ Running on local host port 4000
 
 ### the app  contain the following Endpoints :
 
-@Post(“/users”) create a new user in the DB
-@Put(“/users/:userId”) replace  user  in the DB
-@Patch (“/users/:userId”) update user  in the DB
-@Get (“/users”) get all users from the DB 
-@Get (“/users/:userId”) get a user with the following id 
-@Delete (“/users/:userId”) delete a user with the following id
-@Post (“/posts”) create a new post in the DB
-@Put(“/posts/:postId”) replace  post  in the DB (update text only)
-@Delete (“/posts/:postId”) delete post with the following postID.
-@Get (“/posts”) get all posts in DB sorted by time 
-@Get (“/posts/getUserById”) get all posts that user with the following userId has created sorted by time.
+@Post(“/users”) create a new user in the DB\
+@Put(“/users/:userId”) replace  user  in the DB\
+@Patch (“/users/:userId”) update user  in the DB\
+@Get (“/users”) get all users from the DB \
+@Get (“/users/:userId”) get a user with the following id \
+@Delete (“/users/:userId”) delete a user with the following id\
+@Post (“/posts”) create a new post in the DB\
+@Put(“/posts/:postId”) replace  post  in the DB (update text only)\
+@Delete (“/posts/:postId”) delete post with the following postID.\
+@Get (“/posts”) get all posts in DB sorted by time \
+@Get (“/posts/getUserById”) get all posts that user with the following userId has created sorted by time.\
 
 
 
