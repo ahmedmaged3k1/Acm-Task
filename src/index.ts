@@ -4,9 +4,6 @@ import mongoose   from "mongoose";
 import PostsRouter from "./routers/Posts/PostsRouter"
 import UsersRouter from "./routers/Users/UserRouter"
 
-
-
-
 const app = Express();
 const port = 4000
 const databaseURI = "mongodb+srv://mega:123@cluster0.tavcj.mongodb.net/shoes?retryWrites=true&w=majority"

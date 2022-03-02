@@ -48,7 +48,7 @@ const userSchema = new mongoose_1.Schema({
     },
     id: {
         type: Number,
-        required: true
+        required: false
     }
 });
 const User = mongoose_1.default.model("users", userSchema);

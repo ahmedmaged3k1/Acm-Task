@@ -6,7 +6,7 @@ const router = express.Router()
 router.get("/",getUsers)
 router.post("/",addUser)
 router.get("/getById/:id",getUserById)
-router.patch("/getById/:id",changeUserById)
+router.patch("/changeById/:id",changeUserById)
 
 router.delete("/deleteById/:id",deleteUserById)
 export default router 

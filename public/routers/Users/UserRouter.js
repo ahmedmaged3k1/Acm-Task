@@ -10,6 +10,6 @@ const router = express_1.default.Router();
 router.get("/", UserController_1.getUsers);
 router.post("/", UserController_1.addUser);
 router.get("/getById/:id", UserController_1.getUserById);
-router.patch("/getById/:id", UserController_1.changeUserById);
+router.patch("/changeById/:id", UserController_1.changeUserById);
 router.delete("/deleteById/:id", UserController_1.deleteUserById);
 exports.default = router;

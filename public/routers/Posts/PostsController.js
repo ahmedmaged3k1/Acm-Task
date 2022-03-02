@@ -43,7 +43,7 @@ exports.getPostUserById = getPostUserById;
 function changePostById(request, response, next) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            var id = request.params.id;
+            var id = request.params.postId;
             const post = request.body;
             const newPost = new PostInterface_1.default(post);
             const posts = yield PostInterface_1.default.findOneAndUpdate({ "id": +id }, { "name": newPost.name }, { upsert: true });

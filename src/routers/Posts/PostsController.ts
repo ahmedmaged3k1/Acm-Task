@@ -30,7 +30,7 @@ export async  function getPostUserById (request : Express.Request ,response: Exp
 export async  function changePostById (request : Express.Request ,response: Express.Response, next: Express.NextFunction){
 
     try{
-        var id = request.params.id 
+        var id = request.params.postId 
         const post = request.body
         const newPost =  new Posts(post)
         

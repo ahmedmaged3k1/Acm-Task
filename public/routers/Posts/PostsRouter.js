@@ -10,7 +10,7 @@ const router = express_1.default.Router();
 router.get("/", PostsController_1.getPosts);
 router.post("/", PostsController_1.addPost);
 router.get("/getById/:id", PostsController_1.getPostrById);
-router.patch("/getById/:id", PostsController_1.changePostById);
+//router.patch("/changeById/:postId",changePostById)
 router.get("/getUserById/:userId", PostsController_1.getPostUserById);
 router.delete("/deleteById/:id", PostsController_1.deletePostrById);
 exports.default = router;
